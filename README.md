@@ -65,4 +65,23 @@ jobs:
           TOKEN: ${{ secrets.TOKEN }}
 ```
 
+## Secrets
+
+ * `TOKEN`: [Personal Access key] with the appropriate scope. If the
+    repository is public the `public_repo` scope suffices, for private
+    repositories the full `repo` scope is required. We need this to push
+    the site files back to the repo.
+    
+    ( Actions already provides a `GITHUB_TOKEN` which is an installation token and does not trigger a GitHub Pages builds hence we need a personal access token )
+
+## Environment Variables
+* `PAGES_BRANCH`: The git branch of your repo to which the built static files will be pushed. Default is `build` branch
+* `REPOSITORY`: The target repository to push to. Default is `GITHUB_REPOSITORY`(current repository). Set this variable if you want to deploy to other repo.
+* `BUILD_DIR`: The path from the root of the repo where we should run the `yarn build` command. Default is `.` (current directory)
+* `BUILD_ONLY`: Set to value `true` if you don't want to deploy after `yarn build`.
+* `GITHUB_HOSTNAME`: The Github hostname to use in your action. This is to account for Enterprise instances where the base URL differs from the default, which is `github.com`.
+* `OUTPUT_DIR`: The output directory for published HTML/CSS/JS files. Defaults to `out` for NextJS projects
+
+
 [NextJS]: http://nextjs.org/
+[Personal Access key]: https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line
