@@ -1,0 +1,72 @@
+.society-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+
+  .card {
+    background-color: white;
+    margin: 1rem 1rem;
+    width: 20rem;
+    border-radius: 1rem;
+    cursor: pointer;
+
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    -ms-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+
+    &:hover {
+      cursor: pointer;
+
+      box-shadow: 0 2px 30px rgba(44, 52, 60, 0.6);
+      -webkit-transform: translateY(-5px);
+      -moz-transform: translateY(-5px);
+      -ms-transform: translateY(-5px);
+      -o-transform: translateY(-5px);
+      transform: translateY(-5px);
+    }
+
+    .main-image {
+      box-shadow: 0 30px rgba(44, 52, 60, 0);
+      transform: translateY(0);
+    }
+
+    .intro {
+      position: relative;
+
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 20rem;
+        border-radius: 1rem 1rem 0 0;
+      }
+
+      span {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 0 0 1rem 1rem;
+
+        color: white;
+        // background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
+        font-size: 1.5rem;
+      }
+    }
+    .card-content {
+      margin: 1rem 1rem;
+
+      a {
+        text-decoration: none;
+      }
+
+      svg {
+        color: black;
+      }
+    }
+  }
+}

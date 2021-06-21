@@ -1,0 +1,76 @@
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .card {
+    background-color: white;
+    margin: 1rem 1rem;
+    width: 20rem;
+    border-radius: 1rem;
+
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    .intro {
+      position: relative;
+      overflow: hidden;
+
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 20rem;
+        border-radius: 1rem 1rem 0 0;
+      }
+
+      span {
+        position: absolute;
+        bottom: 0.25rem;
+        left: 0;
+        width: 100%;
+        padding: 1rem 0.5rem;
+
+        color: white;
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
+        font-size: 1.5rem;
+      }
+    }
+    .card-content {
+      margin: 1rem 1rem;
+
+      svg {
+        color: black;
+      }
+    }
+  }
+}
+
+.contact {
+  align-items: center;
+
+  .card:nth-child(1) {
+    width: 40%;
+
+    @include sm {
+      width: 20rem;
+    }
+  }
+
+  .card:nth-child(2) {
+    width: 40%;
+
+    @include sm {
+      width: 20rem;
+    }
+  }
+
+  p {
+    text-align: center;
+  }
+}
+
+.staff {
+  align-items: center;
+
+  p {
+    text-align: center;
+  }
+}

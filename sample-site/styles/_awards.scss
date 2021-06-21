@@ -1,0 +1,89 @@
+.awards {
+  .table-container {
+    font-size: 1.2rem;
+
+    @include sm {
+      font-size: 1rem;
+    }
+    table {
+      margin-bottom: 1rem;
+      width: 100%;
+      border-collapse: collapse;
+      box-shadow: 0 2px 10px rgba(44, 52, 60, 0.6);
+    }
+
+    th,
+    td {
+      padding: 1rem;
+      padding-right: 0.25rem;
+      color: #000;
+
+      .medal::before {
+        content: " \25CF";
+        font-size: 30px;
+      }
+
+      .gold {
+        color: gold;
+      }
+
+      .silver {
+        color: silver;
+      }
+
+      .bronze {
+        color: #cd7f32;
+      }
+
+      @include sm {
+        padding: 0.1rem;
+      }
+    }
+
+    th {
+      text-align: left;
+      color: #fff;
+    }
+
+    thead {
+      position: sticky;
+      top: 1;
+      th {
+        background-color: #009879;
+      }
+    }
+
+    tbody {
+      margin-top: 2rem;
+      tr {
+        background-color: #fff;
+
+        &:nth-of-type(even) {
+          background-color: #f3f3f3;
+        }
+
+        &:last-of-type {
+          border-bottom: 2px solid #04d6ac;
+        }
+      }
+
+      #overall {
+        &:first-of-type {
+          background-color: lightblue;
+        }
+      }
+      td {
+        position: relative;
+        ul {
+          list-style-type: none;
+        }
+
+        @include sm {
+          ul {
+            padding: 0.25rem;
+          }
+        }
+      }
+    }
+  }
+}

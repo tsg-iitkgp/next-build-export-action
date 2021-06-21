@@ -1,0 +1,22 @@
+.details {
+  div {
+    display: flex;
+
+    flex-direction: row;
+
+    @include sm {
+      flex-direction: column;
+    }
+
+    p {
+      img {
+        min-width: 50rem;
+        padding: 0 2rem;
+
+        @include sm {
+          min-width: 10rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+@import "mixins";
+@import "variables";
+@import "typography";
+@import "main";
+@import "animations";
+
+// styling for components
+@import "layout";
+@import "navbar";
+@import "footer";
+@import "imageModal";
+@import "slider";
+
+// styling for pages
+@import "contacts";
+@import "about";
+@import "societies";
+@import "awards";
+@import "soc-detailes";
+@import "office";
+
+#__next {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: 100%;
+  position: relative;
+  margin: 0;
+
+  overflow-x: hidden;
+  width: 100%;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html body {
+  min-height: 100vh;
+  margin: 0;
+  // background: linear-gradient(135deg, #f44336, #673ab7);
+  background: #f44336;
+  // background: url(../public/wave1.svg);
+  // background-size: contain;
+  // background-repeat: no-repeat;
+}
