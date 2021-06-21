@@ -22,9 +22,9 @@ jobs:
     name: Build, export and publish sample site to the `sample-site-build` branch
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
       - name: Build with the latest action rev
-        uses: tsg-iitkgp/next-build-export-action@v1.0
+        uses: tsg-iitkgp/next-build-export-action@v1.1
         env:
           BUILD_DIR: .
           PAGES_BRANCH: sample-site-build
@@ -45,9 +45,9 @@ jobs:
     if: github.ref != 'refs/heads/master'
     steps:
       - name: 'Checkout'
-        uses: actions/checkout@master
+        uses: actions/checkout@v2
       - name: 'Build only' 
-        uses: tsg-iitkgp/next-build-export-action@v1.0
+        uses: tsg-iitkgp/next-build-export-action@v1.1
         env:
           BUILD_DIR: .
           BUILD_ONLY: true
@@ -56,9 +56,9 @@ jobs:
     if: github.ref == 'refs/heads/master'
     steps:
       - name: 'Checkout'
-        uses: actions/checkout@master
+        uses: actions/checkout@v2
       - name: 'Build and deploy'
-        uses: tsg-iitkgp/next-build-export-action@v1.0
+        uses: tsg-iitkgp/next-build-export-action@v1.1
         env:
           BUILD_DIR: .
           PAGES_BRANCH: sample-site-build
