@@ -77,12 +77,13 @@ main() {
 
     echo "Using yarn $version"
 
-    echo "Install yarn dependencies"
-    yarn install --frozen-lockfile --silent
-
     echo "Building in $BUILD_DIR directory"
     cd $BUILD_DIR
 
+    echo "Install yarn dependencies"
+    yarn install --frozen-lockfile --silent
+    
+    echo "Building and Exporting next project"
     yarn build
 
     current_dir="$PWD"
