@@ -26,7 +26,7 @@ jobs:
       - name: Build with the latest action rev
         uses: tsg-iitkgp/next-build-export-action@main
         env:
-          BUILD_DIR .
+          BUILD_DIR: .
           PAGES_BRANCH: sample-site-build
           TOKEN: ${{ secrets.TOKEN }}
 ```
