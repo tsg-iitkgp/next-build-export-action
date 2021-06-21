@@ -3,6 +3,8 @@ A GitHub action to build and export a NextJS site statically, allowing the site 
 
 [![Shellcheck](https://github.com/tsg-iitkgp/next-build-export-action/actions/workflows/shellcheck.yaml/badge.svg)](https://github.com/tsg-iitkgp/next-build-export-action/actions/workflows/shellcheck.yaml)
 
+[![Build](https://github.com/tsg-iitkgp/next-build-export-action/actions/workflows/sample-site.yaml/badge.svg)](https://github.com/tsg-iitkgp/next-build-export-action/actions/workflows/sample-site.yaml)
+
 **Note:** With the very limited information of NextJS that I have, deploying with this method does not allow using all features that NextJS offers. The recommended way of deploying is using Vercel. All caveats are listed [in this documentation](https://nextjs.org/docs/advanced-features/static-html-export)
 
 
