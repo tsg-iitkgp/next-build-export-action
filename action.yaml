@@ -1,0 +1,9 @@
+name: "Next static build and export with HTML/JS minification"
+description: "Build and deploy a NextJS app statically, with HTML/JS minification"
+author: "Mukul Mehta"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+branding:
+  icon: "zap"
+  color: "green"
