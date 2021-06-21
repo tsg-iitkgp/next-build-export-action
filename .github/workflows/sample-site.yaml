@@ -4,7 +4,7 @@ on: [push, pull_request]
 name: Build
 jobs:
   build-and-export:
-    name: Build, export and push to `sample-site-build` branch
+    name: Build and export sample site
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
@@ -13,3 +13,13 @@ jobs:
         env:
           BUILD_ONLY: true
           BUILD_DIR: sample-site
+  build-export-and-deploy:
+    name: Build, export and publish sample site to the `sample-site-build` branch
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Build with the latest action rev
+        uses: tsg-iitkgp/next-build-export-action@main
+        env:
+          BUILD_DIR: sample-site
+          PAGES_BRANCH: sample-site-build
