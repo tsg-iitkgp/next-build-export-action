@@ -14,4 +14,6 @@ ENV LANGUAGE en_US.UTF-8
 RUN apk add --no-cache libc6-compat git
 RUN npm install -g html-minifier-cli uglify-js
 
-ENTRYPOINT ["sh", "entrypoint.sh"]
+COPY entrypoint.sh /entrypoint.sh
+
+ENTRYPOINT ["sh", "/entrypoint.sh"]

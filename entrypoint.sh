@@ -89,7 +89,7 @@ main() {
     current_dir="$PWD"
     public_dir="$current_dir/$OUTPUT_DIR"
     cd "$public_dir"
-    echo "Minifying HTML, JS and Images"
+    echo "Minifying HTML and JS Files"
     minifyhtml
     minifyjs
     cd "$current_dir"

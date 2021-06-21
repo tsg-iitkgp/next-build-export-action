@@ -24,7 +24,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Build with the latest action rev
-        uses: tsg-iitkgp/next-build-export-action@main
+        uses: tsg-iitkgp/next-build-export-action@v1.0
         env:
           BUILD_DIR: .
           PAGES_BRANCH: sample-site-build
@@ -47,7 +47,7 @@ jobs:
       - name: 'Checkout'
         uses: actions/checkout@master
       - name: 'Build only' 
-        uses: tsg-iitkgp/next-build-export-action@main
+        uses: tsg-iitkgp/next-build-export-action@v1.0
         env:
           BUILD_DIR: .
           BUILD_ONLY: true
@@ -58,7 +58,7 @@ jobs:
       - name: 'Checkout'
         uses: actions/checkout@master
       - name: 'Build and deploy'
-        uses: tsg-iitkgp/next-build-export-action@main
+        uses: tsg-iitkgp/next-build-export-action@v1.0
         env:
           BUILD_DIR: .
           PAGES_BRANCH: sample-site-build
