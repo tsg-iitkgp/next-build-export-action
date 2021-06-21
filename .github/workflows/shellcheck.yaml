@@ -1,0 +1,14 @@
+# Trigger the workflow on push or pull request
+on: [push, pull_request]
+
+name: Shellcheck
+jobs:
+  test:
+    name: Static Analysis with Shellcheck
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Shellcheck
+        uses: docker://koalaman/shellcheck:latest
+        with:
+          args: ./entrypoint.sh
