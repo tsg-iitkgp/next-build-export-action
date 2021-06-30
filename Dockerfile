@@ -16,4 +16,4 @@ RUN npm install -g html-minifier-cli uglify-js
 
 COPY entrypoint.sh /entrypoint.sh
 
-#ENTRYPOINT ["sh", "/entrypoint.sh"]
+ENTRYPOINT ["sh", "/entrypoint.sh"]
