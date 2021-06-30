@@ -11,9 +11,9 @@ ENV LC_ALL C.UTF-8
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US.UTF-8
 
-RUN apk add --no-cache libc6-compat git
+RUN apk add --no-cache libc6-compat git pngcrush jpegoptim
 RUN npm install -g html-minifier-cli uglify-js
 
 COPY entrypoint.sh /entrypoint.sh
 
-ENTRYPOINT ["sh", "/entrypoint.sh"]
+#ENTRYPOINT ["sh", "/entrypoint.sh"]
